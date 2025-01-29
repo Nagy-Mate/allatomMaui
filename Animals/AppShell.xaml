@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Animals.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Animals"
+    Shell.FlyoutBehavior="Flyout"
+    Title="Animals">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    <ShellContent
+        Title="Macskák"
+        ContentTemplate="{DataTemplate local:ListPage}"
+        Route="CatPage" />
+    <ShellContent
+        Title="Kutyák"
+        ContentTemplate="{DataTemplate local:ListPage}"
+        Route="DogPage" />
+
+</Shell>
