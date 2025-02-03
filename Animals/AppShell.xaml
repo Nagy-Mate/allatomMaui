@@ -19,5 +19,9 @@
         Title="Kutyák"
         ContentTemplate="{DataTemplate local:ListPage}"
         Route="DogPage" />
+    <ShellContent
+        Title="Halak"
+        ContentTemplate="{DataTemplate local:ListPage}"
+        Route="FishPage" />
 
 </Shell>

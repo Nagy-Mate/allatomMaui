@@ -5,5 +5,7 @@ namespace Animals
     {
         Animal GetAnimalById(int id);
         IEnumerable<Animal> GetSpeciesForType(AnimalType type);
+        void AddAnimal(Animal newAnimal);
+        List<Animal> GetAllAnimals();
     }
 }

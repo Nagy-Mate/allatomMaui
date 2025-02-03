@@ -21,7 +21,8 @@ namespace Animals
             //NOTE: ez a sor nagyon fontos, mert ettől lesz a Maui Appon belül minden oldalon használható ugyanaz az AnimalService
             //későbbiekben ugyanígy lesz használatban DbContext, HttpClient stb...
             builder.Services.AddSingleton<IAnimalService, AnimalService>();
-
+            builder.Services.AddSingleton<MainPage>();
+            builder.Services.AddSingleton<MainViewModel>();
             return builder.Build();
         }
     }

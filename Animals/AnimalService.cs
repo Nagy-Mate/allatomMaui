@@ -46,8 +46,39 @@ public class AnimalService : IAnimalService
             ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/5/59/Basenji_600.jpg",
             Description = "Ez egy Basenji kutya leírás"
         },
+        new Animal {
+            Id = 7,
+            Type = AnimalType.Fish,
+            Species = "Szibériai tok",
+            ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Siberian_sturgeon.jpg/1280px-Siberian_sturgeon.jpg",
+            Description = "Ez egy szibériai tokhal leírás"
+        },
+        new Animal {
+            Id = 8,
+            Type = AnimalType.Fish,
+            Species = "Ponty",
+            ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/a/a8/Common_carp.jpg",
+            Description = "Ez egy ponty leírás"
+        },
+        new Animal {
+            Id = 9,
+            Type = AnimalType.Fish,
+            Species = "Harcsa",
+            ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/4/44/EuropeseMeervalLucasVanDerGeest.jpg",
+            Description = "Ez egy harcsa leírás"
+        },
     };
 
+    public void AddAnimal(Animal newAnimal)
+    {
+
+        newAnimal.Id = animals.Any() ? animals.Max(a => a.Id) + 1 : 1;
+        animals.Add(newAnimal);
+    }
+    public List<Animal> GetAllAnimals()
+    {
+        return animals;
+    }
     public IEnumerable<Animal> GetSpeciesForType(AnimalType type)
     {
         return animals.Where(a => a.Type == type);
